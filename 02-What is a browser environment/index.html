@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Что такое браузерное окружение?</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Что такое браузерное окружение?</h1>
+    <img src="../static/img/browser_env.png" alt="">
+    <p>И вот здесь на схеме в общих чертах показано что доступно js в данном окружении. Во главе всего объект window, который помимо того, что является глобальным объектом, так же представляется собой окно браузера и обладает методами для управления им:</p>
+      <code>
+        const windowWidth = window.innerWidth;
+        <br>
+        console.log(Ширина окна браузера: ${windowWidth}px);
+      </code>
+    <p>Существует гораздо больше методов и свойств для работы с окном браузера, в том числе и прокруткой, но об этом позже, а пока продолжим знакомиться с окружением.После объекта window у нас js со своими сущностями: объекты, массивы, ф и т.д.</p>
+  </div>
+
+  <footer>
+    <p><a href="../navigation.html">Перейти к оглавлению</a></p>
+  </footer>
+
+</body>
+</html>

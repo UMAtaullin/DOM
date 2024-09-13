@@ -9,9 +9,9 @@ console.log(navigator.userAgent);
 console.log(location.href);
 
 // Перенаправить пользователя
-// location.href='https://fls.guru';
+location.href='https://fls.guru';
 
-// История браузера и передвигаться по страницам
-// history.back();
-// history.forward();
+// Объект history позволяет управлять историей браузера и передвигаться по посещенным страницам
+history.back();
+history.forward();
 
