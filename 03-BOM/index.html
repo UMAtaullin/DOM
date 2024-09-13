@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Документ о BOM</title>
+</head>
+<body>
+    <h1>Объектная модель браузера (BOM)</h1>
+    <p>BOM (объектная модель браузера) - дополнительные объекты, предоставляемые браузером для работы со всем, кроме документа.</p>
+
+    <h2>Примеры использования BOM</h2>
+
+    <h3>Получение данных о браузере и ОС</h3>
+    <pre><code>console.log(navigator.userAgent);</code></pre>
+
+    <h3>Текущий адрес страницы</h3>
+    <pre><code>console.log(location.href);</code></pre>
+
+    <h3>Перенаправление пользователя</h3>
+    <pre><code>location.href = 'https://fls.guru';</code></pre>
+
+    <h3>Управление историей браузера</h3>
+    <pre><code>history.back();</code></pre>
+    <pre><code>history.forward();</code></pre>
+
+    <h2>Полезные методы для взаимодействия с пользователем</h2>
+    <p>Существуют еще полезные методы, которые тоже часть BOM:</p>
+    <ul>
+        <li><code>alert</code></li>
+        <li><code>confirm</code></li>
+        <li><code>prompt</code></li>
+    </ul>
+    
+    <h3>Пример использования диалоговых окон</h3>
+    <pre><code>alert('hi');</code></pre>
+    <pre><code>const confirmResult = confirm('Хочешь верстать?');</code></pre>
+    <pre><code>console.log(confirmResult);</code></pre>
+    <pre><code>const promptResult = prompt('Who are you in life?');</code></pre>
+    <pre><code>console.log(promptResult);</code></pre>
+</body>
+</html>
