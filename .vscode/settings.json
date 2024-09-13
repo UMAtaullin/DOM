@@ -1,5 +1,0 @@
-{
-  "prettier.useTabs": false, // Spaces insted of tabs.
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true // Insert spaces when pressing Tab.
-}
