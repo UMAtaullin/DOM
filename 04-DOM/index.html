@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Объектная модель документа DOM</title>
+</head>
+<body>
+  <header>
+    <a href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=360s" target="_blank">Смотреть видеоурок</a>
+    <a href="../navigation.html">Перейти к оглавлению</a>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Объектная модель документа DOM</h1>
+      <p>DOM представляет содержимое страницы в виде объектов, которые можно менять.</p>
+  
+      <p>Основой любого html документа являются теги и в соответствии с DOM каждый тег является объектом:</p>
+
+      <ul>
+        <li><code>вложенные теги являются дочерними и потомками своего родителя</code></li>
+        <li><code>текст и комментарии тоже объекты</code></li>
+      </ul>
+  
+      <p>Абсолютно все объекты доступны из js и мы можем ими управлять.</p>
+
+      <h2>Как взаимодействовать с DOM?</h2>
+      <p>Все взаимодействия начинаются с объекта document - это основная точка входа в дом. Например, Самые верхние элементы дерева доступны как свойства объекта document:</p>
+      <pre><code>const htmlEl = document.documentElement</code></pre>
+      <pre><code>const headEl = document.head</code></pre>
+      <pre><code>const bodyEl = document.body</code></pre>
+      <pre><code>const firstChildNode = bodyEl.firstChild</code></pre>
+     
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="../navigation.html">Перейти к оглавлению</a></p>
+  </footer>
+
+  <script src="dom.js"></script>
+</body>
+</html>
