@@ -19,3 +19,7 @@ img {
   min-width: 50%;
   height: auto;
 }
+
+header, footer {
+  text-align: center;
+}
