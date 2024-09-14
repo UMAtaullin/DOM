@@ -9,6 +9,7 @@
 <body>
   <header>
     <a href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=71s" target="_blank">Смотреть видеоурок</a>
+    <a href="../navigation.html">Перейти к оглавлению</a>
   </header>
 
   <main>
@@ -17,9 +18,8 @@
       <img src="browser_env.png" alt="">
       <p>И вот здесь на схеме в общих чертах показано что доступно js в данном окружении. Во главе всего объект window, который помимо того, что является глобальным объектом, так же представляется собой окно браузера и обладает методами для управления им:</p>
         <code>
-          const windowWidth = window.innerWidth;
-          <br>
-          console.log(Ширина окна браузера: ${windowWidth}px);
+          <pre>const windowWidth = window.innerWidth;</pre>          
+          <pre>console.log(Ширина окна браузера: ${windowWidth}px);</pre>
         </code>
       <p>Существует гораздо больше методов и свойств для работы с окном браузера, в том числе и прокруткой, но об этом позже, а пока продолжим знакомиться с окружением.После объекта window у нас js со своими сущностями: объекты, массивы, ф и т.д.</p>
     </div>
