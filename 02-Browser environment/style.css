@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 body {
+  /* box-sizing: border-box; */
   font-family: JetBrains Mono, sans-serif;
 }
 
@@ -10,6 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   max-width: 900px;
+  margin: auto;
   width: 100%;
 }
 
