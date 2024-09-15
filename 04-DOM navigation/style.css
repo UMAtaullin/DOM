@@ -32,6 +32,7 @@ pre {
 }
 
 code {
+  font-size: 16px;
   font-family: monospace;
   background: #f9f9f9;
   padding: 2px 4px;
@@ -41,4 +42,3 @@ code {
 footer {
   text-align: center;
 }
-

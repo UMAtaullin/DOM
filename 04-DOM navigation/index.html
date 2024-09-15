@@ -17,11 +17,13 @@
       <h1>Объектная модель документа DOM</h1>
       <p>DOM представляет содержимое страницы в виде объектов, которые можно менять.</p>
   
-      <p>Основой любого html документа являются теги и в соответствии с DOM каждый тег является объектом:</p>
+      <p>Основой любого html документа являются теги и в соответствии с DOM каждый тег является объектом. Формально DOM содержит 12 различных объектов, но в основном используются:</p>
 
       <ul>
-        <li><code>вложенные теги являются дочерними и потомками своего родителя</code></li>
-        <li><code>текст и комментарии тоже объекты</code></li>
+        <li><code>document - точка входа в DOM</code></li>
+        <li><code>узлы-элементы - это теги</code></li>
+        <li><code>текстовые узлы</code></li>
+        <li><code>комментарии</code></li>
       </ul>
   
       <p>Абсолютно все объекты доступны из js и мы можем ими управлять.</p>
@@ -31,8 +33,17 @@
       <pre><code>const htmlEl = document.documentElement</code></pre>
       <pre><code>const headEl = document.head</code></pre>
       <pre><code>const bodyEl = document.body</code></pre>
-      <pre><code>const firstChildNode = bodyEl.firstChild</code></pre>
      
+      <p>У каждого узла есть два полезных свойства:</p>
+      <ul>
+        <li><code>firstChild</code></li>
+        <li><code>lastChild</code></li>
+      </ul>
+
+      <h2>Переходы между соседними элементами</h2>
+      <pre><code>previousSibling</code></pre>
+      <pre><code>nextSibling</code></pre>
+      <pre><code>parentNode</code></pre>
     </div>
   </main>
 

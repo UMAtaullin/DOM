@@ -32,6 +32,10 @@ for (let node of childNodes) {
   console.log(node) // покажет все узлы коллекции
 }
 
+// Если хотим использовать методы массива
+let arr = Array.from(childNodes)
+arr.forEach(el => console.log(el))
+
 // 'Живые коллекции'
 // Почти все DOM-коллекции живые. Они отражают текущее состояние DOM.
 
