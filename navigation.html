@@ -1,37 +1,120 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="sytle.css">
-  <title>Оглавление</title>
-</head>
-<body>
-  <h1>Оглавление</h1>
-  <nav>
-    <ul>
-      <li>
-        <a href="01-JavaScript environment/index.html">
-          Тема 1: Что такое окружение JS?</a>
-        <a href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=29s" target="_blank">   Смотреть видеоурок</a>
-      </li>
-      <li>
-        <a href="Browser environment?/index.html">Тема 2: Что такое браузерное окружение?</a>
-        <a href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=71s" target="_blank">   Смотреть видеоурок</a>
-      </li>
-      <li>
-        <a href="03-BOM/index.html">Тема 3: BOM (объектная модель браузера)</a>
-        <a href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=117s" target="_blank">   Смотреть видеоурок</a>
-      </li>
-      <li>
-        <a href="04-DOM/index.html">Объектная модель документа DOM</a>
-        <a href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=360s" target="_blank">   Смотреть видеоурок</a>
-      </li>
-      <li>
-        <a href="05-DOM/index.html">Методы поиска элементов в DOM</a>
-        <a href="https://www.youtube.com/watch?v=xuOYrDaS5lI&list=PLA0M1Bcd0w8zri9wWiDFmOukXhguEYBBO&index=3" target="_blank">   Смотреть видеоурок</a>
-      </li>
-    </ul>
-  </nav>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sytle.css" />
+    <title>Оглавление</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr; /* Одна колонка для контейнера */
+        max-width: 900px;
+        margin: auto;
+        font-size: 18px;
+      }
+
+      nav ul {
+        list-style: none; /* Убираем маркеры */
+        padding: 0; /* Убираем отступы */
+      }
+
+      nav li {
+        display: grid; /* Используем грид для каждого элемента списка */
+        grid-template-columns: 2fr auto; /* Первая колонка для темы, вторая для ссылки */
+        align-items: center; /* Вертикальное выравнивание по центру */
+        border: 0.5px solid #ccc;
+        padding: 10px;
+      }
+
+      .topic a {
+        text-decoration: none; /* Убираем подчеркивание */
+        color: #000; /* Цвет текста */
+      }
+
+      .video-link a {
+        text-decoration: none; /* Убираем подчеркивание */
+        color: #007bff; /* Цвет текста для ссылки */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center">Оглавление</h1>
+      <nav>
+        <ul>
+          <li>
+            <span class="topic"
+              ><a href="01-JavaScript environment/index.html"
+                >Тема 1: Что такое окружение JS?</a
+              ></span
+            >
+            <span class="video-link"
+              ><a
+                href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=29s"
+                target="_blank"
+                >Смотреть видеоурок</a
+              ></span
+            >
+          </li>
+          <li>
+            <span class="topic"
+              ><a href="Browser environment?/index.html"
+                >Тема 2: Что такое браузерное окружение?</a
+              ></span
+            >
+            <span class="video-link"
+              ><a
+                href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=71s"
+                target="_blank"
+                >Смотреть видеоурок</a
+              ></span
+            >
+          </li>
+          <li>
+            <span class="topic"
+              ><a href="03-BOM/index.html"
+                >Тема 3: BOM (объектная модель браузера)</a
+              ></span
+            >
+            <span class="video-link"
+              ><a
+                href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=117s"
+                target="_blank"
+                >Смотреть видеоурок</a
+              ></span
+            >
+          </li>
+          <li>
+            <span class="topic"
+              ><a href="04-DOM/index.html"
+                >Тема 4: Объектная модель документа DOM</a
+              ></span
+            >
+            <span class="video-link"
+              ><a
+                href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=360s"
+                target="_blank"
+                >Смотреть видеоурок</a
+              ></span
+            >
+          </li>
+          <li>
+            <span class="topic"
+              ><a href="05-DOM/index.html"
+                >Тема 5: Методы поиска элементов в DOM</a
+              ></span
+            >
+            <span class="video-link"
+              ><a
+                href="https://www.youtube.com/watch?v=xuOYrDaS5lI&list=PLA0M1Bcd0w8zri9wWiDFmOukXhguEYBBO&index=3"
+                target="_blank"
+                >Смотреть видеоурок</a
+              ></span
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
 </html>
