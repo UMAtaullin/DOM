@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Методы поиска элементов в DOM</title>
+</head>
+<body>
+  <header>
+    <a href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=1046s" target="_blank">Смотреть видеоурок</a>
+    <a href="../navigation.html">Перейти к оглавлению</a>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Методы поиска элементов в DOM</h1>
+      <h2>querySelector</h2>
+      <p>С помощью querySelectorAll можно довольно просто выбрать нужные элементы и далее производить с ними необходимые действия..</p>
+  
+      <p>И теперь хотим выбрать все теги, но только у маркированного списка. Для этого запишем метод querySelectorAll с таким CSS-селектором:</p>
+      <pre><code>let list = document.querySelectorAll("ul > li")</code></pre>
+      <pre><code>for(let val of list) console.log(val)</code></pre>
+      <p>Так же можно использовать псевдокласс для указания более сложных CSS-селекторов, например, так:</p>
+      <pre><code>let list = document.querySelectorAll("ul > li:first-child")</code></pre>
+      <p>Если же нам нужно по определенному CSS-селектору найти только первый подходящий элемент, то для этого применяется другой метод querySelector:</p>
+      <pre><code>const firstChildNode = bodyEl.firstChild</code></pre>
+     
+      <p>В старых версиях языка JavaScript (стандарта ES5-) существуют следующие методы для поиска элементов:</p>
+      <ul>
+        <li><code>elem.getElementsByTagName(tag) ищет элементы с указанным тегом и возвращает их коллекцию. Указав "*" вместо тега, можно получить всех потомков</code></li>
+        <li><code>elem.getElementsByClassName(className) возвращает элементы, которые имеют указанный CSS-класс</code></li>
+        <li><code>document.getElementsByName(name) возвращает элементы с заданным атрибутом name. (Используется очень редко)</code></li>
+      </ul>
+      <p>Применение этих методов очевидно и я привел их здесь лишь для полноты картины, так как вы можете их встретить в старых скриптах. Вместо всех этих методов теперь используются методы querySelector и querySelectorAll. Они дают гораздо больше возможностей, чем старые методы.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="../navigation.html">Перейти к оглавлению</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
