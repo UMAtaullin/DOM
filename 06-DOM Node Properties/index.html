@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Свойства DOM-узлов</title>
+  </head>
+  <body>
+    <header>
+      <a
+        href="https://www.youtube.com/watch?v=DuWyc76lYC4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=52&t=1046s"
+        target="_blank"
+        >Смотреть видеоурок</a
+      >
+      <a href="../navigation.html">Перейти к оглавлению</a>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Свойства DOM-узлов</h1>
+        <p>Часто используемые свойствами DOM-узлов:</p>
+        <p><img src="node_properties.png" alt="" /></p>
+        <p>
+          Все элементы DOM содержат вот этот корневой класс EventTarget и класс
+          Node, который наследуется от него. Далее, начинается специализация
+          классов: Text – для текстовых элементов; Element – для тегов; Comment
+          – для комментариев.
+        </p>
+
+        <p>
+          Базовые классы EventTarget и Node являются абстрактными, то есть, они
+          служат только для построения других (дочерних) классов, но сами по
+          себе существовать не могут – только в составе других классов.
+          Остальные объекты могут быть созданы и быть узлом DOM-дерева.
+        </p>
+
+        <p>
+          Чтобы узнать имя класса DOM-узла, обычно, у объекта есть свойство
+          constructor. Оно ссылается на конструктор класса, и в свойстве
+          constructor.name содержится его имя:
+        </p>
+        <pre><code>console.log( document.body.constructor.name )</code></pre>
+
+        <p>
+          Если мы хотим отобразить в консоли структуру объекта, то вместо
+          console.log следует использовать console.dir:
+        </p>
+        <pre><code>console.dir(document.body)</code></pre>
+
+        <p>Имя узла можно узнать по свойствам nodeName и tagName:</p>
+        <pre><code>console.log(document.body.nodeName)</code></pre>
+
+        <p>А вот если отобразить свойство tagName, то получим следующее:</p>
+        <pre><code>console.log(document.body.tagName)</code></pre>
+
+        <p>
+          у комментария нет свойства tagName, оно есть только у тега-элемента и
+          имеет то же значение, что и nodeName. Это справедливо и для всех
+          остальных типов элементов: tagName – имя свойства тега-элемента;
+          nodeName – имя свойства любого узла DOM-дерева. В общем случае мы
+          всегда можем использовать nodeName для любых узлов, чтобы узнать его
+          имя.
+        </p>
+
+        <h2>innerHTML</h2>
+        <p>
+          У элементов-тегов имеется свойство innerHTML, позволяющее читать и
+          менять содержимое любых тегов HTML-документа. Например, вот так
+        </p>
+        <pre><code>let h1 = document.body.firstChild.nextSibling</code></pre>
+        <pre><code>console.log(h1.innerHTML)</code></pre>
+
+        <p>можно вывести содержимое заголовка h1 в консоль. А вот так изменить его:</p>
+        <pre><code>h1.innerHTML = "Измененный заголовок"</code></pre>
+        
+        <h2>outerHTML</h2>
+        <p>
+          Следующее свойство тега-элемента outerHTML работает также как и innerHTML, но содержит информацию не только о содержимом тега, но и сам тег. С его помощью мы можем изменять тег целиком, то есть, на его место записывать другой тег. Например:
+        </p>
+        <pre><code>h1.outerHTML = "&lt;h2&gt;Измененный <u>заголовок</u> из h1 в &lt;/h2&gt;"</code></pre>
+          <p>Теперь у нас вместо заголовка h1 появляется заголовок h2 с новым содержимым. И здесь есть одна тонкость: переменная h1 продолжает содержать информацию о заголовке h1:</p>
+        <pre><code>console.dir(h1)</code></pre>
+        <p>То есть, мы на странице заменили этот заголовок, но в переменной прежняя информация продолжает существовать. В частности, если вывести содержимое свойства outerHTML, то увидим прежний заголовок:</p>
+
+        <pre><code>console.log(h1.outerHTML)</code></pre>
+
+        <p>Поэтому, как только мы заменяем какой-либо элемент через свойство outerHTML, прежнюю переменную следует либо обновить новой информацией, либо отбросить и в дальнейшем не использовать.</p>
+
+
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="../navigation.html">Перейти к оглавлению</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
